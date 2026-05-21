@@ -344,7 +344,7 @@ function FilesPage() {
 
             {/* File table */}
             <section className="mt-6 overflow-hidden rounded-xl border border-border bg-card shadow-card">
-              <div className="grid grid-cols-[1.5fr_1fr_1fr_auto] gap-4 border-b border-border px-5 py-3 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+              <div className="grid grid-cols-[minmax(0,1fr)_120px_100px_160px] gap-4 border-b border-border px-5 py-3 text-xs font-medium uppercase tracking-wide text-muted-foreground">
                 <span>Nombre</span>
                 <span>Visibilidad</span>
                 <span>Tipo</span>
@@ -362,7 +362,7 @@ function FilesPage() {
                   {filteredDirs.map((d) => (
                     <div
                       key={d.directory_id}
-                      className="grid grid-cols-[1.5fr_1fr_1fr_auto] items-center gap-4 border-b border-border/60 px-5 py-3 text-sm transition-colors last:border-b-0 hover:bg-accent/10"
+                      className="grid grid-cols-[minmax(0,1fr)_120px_100px_160px] items-center gap-4 border-b border-border/60 px-5 py-3 text-sm transition-colors last:border-b-0 hover:bg-accent/10"
                     >
                       <button
                         onClick={() => openDir(d)}
@@ -391,7 +391,7 @@ function FilesPage() {
                     return (
                       <div
                         key={f.archive_id}
-                        className="grid grid-cols-[1.5fr_1fr_1fr_auto] items-center gap-4 border-b border-border/60 px-5 py-3 text-sm transition-colors last:border-b-0 hover:bg-accent/10"
+                        className="grid grid-cols-[minmax(0,1fr)_120px_100px_160px] items-center gap-4 border-b border-border/60 px-5 py-3 text-sm transition-colors last:border-b-0 hover:bg-accent/10"
                       >
                         <div className="flex min-w-0 items-center gap-3">
                           <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-muted text-primary">
