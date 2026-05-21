@@ -265,12 +265,14 @@ function FilesPage() {
             </span>
             ColapsoLoad
           </Link>
-          <span className="text-sm text-muted-foreground hidden sm:block">
-            {user?.user_na}
-          </span>
-          <Button onClick={logout} variant="ghost" size="icon" aria-label="Cerrar sesión">
-            <LogOut className="h-4 w-4" />
-          </Button>
+          <div className="flex items-center gap-4">
+            <span className="text-sm font-medium text-foreground hidden sm:block">
+              {user?.user_na}
+            </span>
+            <Button onClick={logout} variant="ghost" size="icon" aria-label="Cerrar sesión">
+              <LogOut className="h-4 w-4" />
+            </Button>
+          </div>
         </div>
       </header>
 
@@ -283,9 +285,6 @@ function FilesPage() {
                 {dirs.length} carpetas · {files.length} archivos
               </p>
             </div>
-            <TabsList>
-              <TabsTrigger value="my-files">Mis archivos</TabsTrigger>
-            </TabsList>
           </div>
 
           {/* ── My Files Tab ── */}
